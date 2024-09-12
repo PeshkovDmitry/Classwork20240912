@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd493ca4-db67-466d-9978-3b4397f21623" name="Changes" comment="Решено задание 3">
+    <list default="true" id="cd493ca4-db67-466d-9978-3b4397f21623" name="Changes" comment="Решено задание 4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task04.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task04.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task05.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task05.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +53,7 @@
     "Python.Task02.executor": "Run",
     "Python.Task03.executor": "Run",
     "Python.Task04.executor": "Run",
+    "Python.Task05.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master"
   }
@@ -97,7 +98,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726133032890</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Решено задание 4">
+      <option name="closed" value="true" />
+      <created>1726139810273</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1726139810273</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -105,6 +114,7 @@
     <MESSAGE value="Решено задание 1" />
     <MESSAGE value="Решено задание 2" />
     <MESSAGE value="Решено задание 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Решено задание 3" />
+    <MESSAGE value="Решено задание 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Решено задание 4" />
   </component>
 </project>
