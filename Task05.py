@@ -16,35 +16,33 @@ DAYS_OF_WEEK_NUM = {"понедельник": 1, "вторник": 2, "сред�
                     "воскресенье": 7}
 
 
-def get_date(text: str) -> datetime:
+def get_date(day: int, day_of_week: int, month: int) -> datetime:
     try:
-        text = correct_text(text)
-        dt = get_first_day_of_month(text)
-        dt = get_first_needed_day_of_week(dt, text)
-        dt = get_needed_day_of_week(dt, text)
+        dt = get_first_day_of_month(month)
+        dt = get_first_needed_day_of_week(dt, day_of_week)
+        dt = get_needed_day_of_week(dt, day)
         return dt
     except Exception:
         print("Что-то пошло не так...")
 
 
-def get_needed_day_of_week(dt, text):
-    delta_t = timedelta(weeks=1)
-    for _ in range(1, int(text.split()[0])):
+def get_first_day_of_month(month: int) -> datetime:
+    year = datetime.now().year
+    dt = datetime(year=year, month=month, day=1)
+    return dt
+
+
+def get_first_needed_day_of_week(dt: datetime, day_of_week: int) -> datetime:
+    delta_t = timedelta(days=1)
+    while not DAYS_OF_WEEK_NUM.get(dt.strftime("%A").lower()) == day_of_week:
         dt += delta_t
     return dt
 
 
-def correct_text(text):
-    text = text.replace("-й", "")
-    text = text.replace("-я", "")
-    return text
-
-
-def get_first_day_of_month(text):
-    month = text.split()[2]
-    month_num = datetime.strptime(month, "%B").month
-    year = datetime.now().year
-    dt = datetime(year=year, month=month_num, day=1)
+def get_needed_day_of_week(dt: datetime, day: int) -> datetime:
+    delta_t = timedelta(weeks=1)
+    for _ in range(1, day):
+        dt += delta_t
     return dt
 
 
@@ -60,6 +58,7 @@ if args.day_of_week is None:
     args.day_of_week = DAYS_OF_WEEK_NUM.get(datetime.now().strftime("%A").lower())
 if args.month is None:
     args.month = datetime.now().month
+
 
 print(args.day, args.day_of_week, args.month)
 print(get_date(args.day, args.day_of_week, args.month))
